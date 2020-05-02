@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'ee.blacky.papi.advancements'
+version '1.0'
+description = 'PAPI-Expansion-Essentials'
+sourceCompatibility = '1.8'
+
+def paperVersion = "1.15.2-R0.1-SNAPSHOT"
+def placeholderVersion = "2.10.5"
+
+repositories {
+    //mavenCentral()
+    maven {
+        name 'papermc'
+        url 'https://papermc.io/repo/repository/maven-public/'
+    }
+    maven {
+        name 'placeholderapi'
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+}
+
+dependencies {
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly "com.destroystokyo.paper:paper-api:${paperVersion}"
+    compileOnly "me.clip:placeholderapi:${placeholderVersion}"
+}
